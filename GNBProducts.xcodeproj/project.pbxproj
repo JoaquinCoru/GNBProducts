@@ -9,21 +9,29 @@
 /* Begin PBXBuildFile section */
 		D23FFD002986FF140000F63D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23FFCFF2986FF140000F63D /* AppDelegate.swift */; };
 		D23FFD022986FF140000F63D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23FFD012986FF140000F63D /* SceneDelegate.swift */; };
-		D23FFD042986FF140000F63D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23FFD032986FF140000F63D /* ViewController.swift */; };
-		D23FFD072986FF140000F63D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D23FFD052986FF140000F63D /* Main.storyboard */; };
 		D23FFD092986FF150000F63D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D23FFD082986FF150000F63D /* Assets.xcassets */; };
 		D23FFD0C2986FF150000F63D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D23FFD0A2986FF150000F63D /* LaunchScreen.storyboard */; };
+		D23FFD16298703AA0000F63D /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23FFD14298703AA0000F63D /* ProductsViewController.swift */; };
+		D23FFD17298703AA0000F63D /* ProductsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D23FFD15298703AA0000F63D /* ProductsViewController.xib */; };
+		D23FFD1B2987093E0000F63D /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23FFD1A2987093E0000F63D /* WebService.swift */; };
+		D23FFD1D29870B190000F63D /* Rate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23FFD1C29870B190000F63D /* Rate.swift */; };
+		D23FFD1F29870B780000F63D /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23FFD1E29870B780000F63D /* Transaction.swift */; };
+		D23FFD212987146B0000F63D /* ProductsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23FFD202987146B0000F63D /* ProductsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D23FFCFC2986FF140000F63D /* GNBProducts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GNBProducts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D23FFCFF2986FF140000F63D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D23FFD012986FF140000F63D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D23FFD032986FF140000F63D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D23FFD062986FF140000F63D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D23FFD082986FF150000F63D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D23FFD0B2986FF150000F63D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D23FFD0D2986FF150000F63D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D23FFD14298703AA0000F63D /* ProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
+		D23FFD15298703AA0000F63D /* ProductsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductsViewController.xib; sourceTree = "<group>"; };
+		D23FFD1A2987093E0000F63D /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		D23FFD1C29870B190000F63D /* Rate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rate.swift; sourceTree = "<group>"; };
+		D23FFD1E29870B780000F63D /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		D23FFD202987146B0000F63D /* ProductsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +66,41 @@
 			children = (
 				D23FFCFF2986FF140000F63D /* AppDelegate.swift */,
 				D23FFD012986FF140000F63D /* SceneDelegate.swift */,
-				D23FFD032986FF140000F63D /* ViewController.swift */,
-				D23FFD052986FF140000F63D /* Main.storyboard */,
+				D23FFD19298709250000F63D /* Services */,
+				D23FFD18298707FE0000F63D /* Model */,
+				D23FFD13298703640000F63D /* UI */,
 				D23FFD082986FF150000F63D /* Assets.xcassets */,
 				D23FFD0A2986FF150000F63D /* LaunchScreen.storyboard */,
 				D23FFD0D2986FF150000F63D /* Info.plist */,
 			);
 			path = GNBProducts;
+			sourceTree = "<group>";
+		};
+		D23FFD13298703640000F63D /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				D23FFD14298703AA0000F63D /* ProductsViewController.swift */,
+				D23FFD15298703AA0000F63D /* ProductsViewController.xib */,
+				D23FFD202987146B0000F63D /* ProductsViewModel.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		D23FFD18298707FE0000F63D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D23FFD1C29870B190000F63D /* Rate.swift */,
+				D23FFD1E29870B780000F63D /* Transaction.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D23FFD19298709250000F63D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D23FFD1A2987093E0000F63D /* WebService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +163,7 @@
 			files = (
 				D23FFD0C2986FF150000F63D /* LaunchScreen.storyboard in Resources */,
 				D23FFD092986FF150000F63D /* Assets.xcassets in Resources */,
-				D23FFD072986FF140000F63D /* Main.storyboard in Resources */,
+				D23FFD17298703AA0000F63D /* ProductsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,8 +174,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D23FFD042986FF140000F63D /* ViewController.swift in Sources */,
+				D23FFD16298703AA0000F63D /* ProductsViewController.swift in Sources */,
 				D23FFD002986FF140000F63D /* AppDelegate.swift in Sources */,
+				D23FFD212987146B0000F63D /* ProductsViewModel.swift in Sources */,
+				D23FFD1F29870B780000F63D /* Transaction.swift in Sources */,
+				D23FFD1B2987093E0000F63D /* WebService.swift in Sources */,
+				D23FFD1D29870B190000F63D /* Rate.swift in Sources */,
 				D23FFD022986FF140000F63D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,14 +187,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		D23FFD052986FF140000F63D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D23FFD062986FF140000F63D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D23FFD0A2986FF150000F63D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -291,9 +323,10 @@
 				INFOPLIST_FILE = GNBProducts/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -318,9 +351,10 @@
 				INFOPLIST_FILE = GNBProducts/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
