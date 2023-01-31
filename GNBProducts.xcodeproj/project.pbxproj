@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D20F0DBC298813D600E127AD /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20F0DBB298813D600E127AD /* Extensions.swift */; };
 		D23FFD002986FF140000F63D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23FFCFF2986FF140000F63D /* AppDelegate.swift */; };
 		D23FFD022986FF140000F63D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23FFD012986FF140000F63D /* SceneDelegate.swift */; };
 		D23FFD092986FF150000F63D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D23FFD082986FF150000F63D /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D20F0DBB298813D600E127AD /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		D23FFCFC2986FF140000F63D /* GNBProducts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GNBProducts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D23FFCFF2986FF140000F63D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D23FFD012986FF140000F63D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +47,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D20F0DBA2988134500E127AD /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				D20F0DBB298813D600E127AD /* Extensions.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		D23FFCF32986FF140000F63D = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +76,7 @@
 			children = (
 				D23FFCFF2986FF140000F63D /* AppDelegate.swift */,
 				D23FFD012986FF140000F63D /* SceneDelegate.swift */,
+				D20F0DBA2988134500E127AD /* Utils */,
 				D23FFD19298709250000F63D /* Services */,
 				D23FFD18298707FE0000F63D /* Model */,
 				D23FFD13298703640000F63D /* UI */,
@@ -177,6 +188,7 @@
 				D23FFD16298703AA0000F63D /* ProductsViewController.swift in Sources */,
 				D23FFD002986FF140000F63D /* AppDelegate.swift in Sources */,
 				D23FFD212987146B0000F63D /* ProductsViewModel.swift in Sources */,
+				D20F0DBC298813D600E127AD /* Extensions.swift in Sources */,
 				D23FFD1F29870B780000F63D /* Transaction.swift in Sources */,
 				D23FFD1B2987093E0000F63D /* WebService.swift in Sources */,
 				D23FFD1D29870B190000F63D /* Rate.swift in Sources */,

@@ -9,6 +9,6 @@ import Foundation
 
 struct Transaction: Codable, Hashable {
     let sku: String
-    let amount: Float
+    let amount: Decimal
     let currency: String    
 }
