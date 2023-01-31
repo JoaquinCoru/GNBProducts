@@ -22,6 +22,11 @@ protocol WebServiceDelegate: AnyObject {
 }
 
 final class WebService: WebServiceDelegate {
+    let session: URLSession
+    
+    init(session: URLSession = .shared) {
+        self.session = session
+    }
     
     func getRates() -> AnyPublisher<[Rate], Error> {
         let urlString = "\(baseUrl)\(Endpoints.rates.rawValue)"
@@ -30,7 +35,7 @@ final class WebService: WebServiceDelegate {
             fatalError("Invalid URL")
         }
         
-        return URLSession.shared.dataTaskPublisher(for: url)
+        return session.dataTaskPublisher(for: url)
             .map(\.data)
             .decode(type: [Rate].self, decoder: JSONDecoder())
             .eraseToAnyPublisher()
@@ -43,7 +48,7 @@ final class WebService: WebServiceDelegate {
             fatalError("Invalid URL")
         }
         
-        return URLSession.shared.dataTaskPublisher(for: url)
+        return session.dataTaskPublisher(for: url)
             .map(\.data)
             .decode(type: [Transaction].self, decoder: JSONDecoder())
             .eraseToAnyPublisher()
