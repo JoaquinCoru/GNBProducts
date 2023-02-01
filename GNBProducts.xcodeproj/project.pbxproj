@@ -21,9 +21,6 @@
 		D25A7963298928C1009D68DD /* WebServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25A7962298928C1009D68DD /* WebServiceTests.swift */; };
 		D2B5D9902989CF80002CAD44 /* URLSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B5D98F2989CF80002CAD44 /* URLSessionMock.swift */; };
 		D2B5D9952989E73D002CAD44 /* rates.json in Resources */ = {isa = PBXBuildFile; fileRef = D2B5D9942989E73D002CAD44 /* rates.json */; };
-		D2DC1948298A97F80077371B /* ProductsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DC1947298A97F80077371B /* ProductsView.swift */; };
-		D2DC1952298A99FF0077371B /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DC1950298A99FF0077371B /* FirstViewController.swift */; };
-		D2DC1953298A99FF0077371B /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2DC1951298A99FF0077371B /* FirstViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,9 +51,6 @@
 		D25A7962298928C1009D68DD /* WebServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceTests.swift; sourceTree = "<group>"; };
 		D2B5D98F2989CF80002CAD44 /* URLSessionMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionMock.swift; sourceTree = "<group>"; };
 		D2B5D9942989E73D002CAD44 /* rates.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = rates.json; sourceTree = "<group>"; };
-		D2DC1947298A97F80077371B /* ProductsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsView.swift; sourceTree = "<group>"; };
-		D2DC1950298A99FF0077371B /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		D2DC1951298A99FF0077371B /* FirstViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,10 +116,9 @@
 		D23FFD13298703640000F63D /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				D2DC1949298A97FE0077371B /* SwitUI */,
-				D2DC194A298A980B0077371B /* UIKit */,
+				D23FFD14298703AA0000F63D /* ProductsViewController.swift */,
+				D23FFD15298703AA0000F63D /* ProductsViewController.xib */,
 				D23FFD202987146B0000F63D /* ProductsViewModel.swift */,
-				D2DC194F298A984C0077371B /* Home */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -155,32 +148,6 @@
 				D2B5D98F2989CF80002CAD44 /* URLSessionMock.swift */,
 			);
 			path = GNBProductsTests;
-			sourceTree = "<group>";
-		};
-		D2DC1949298A97FE0077371B /* SwitUI */ = {
-			isa = PBXGroup;
-			children = (
-				D2DC1947298A97F80077371B /* ProductsView.swift */,
-			);
-			path = SwitUI;
-			sourceTree = "<group>";
-		};
-		D2DC194A298A980B0077371B /* UIKit */ = {
-			isa = PBXGroup;
-			children = (
-				D23FFD14298703AA0000F63D /* ProductsViewController.swift */,
-				D23FFD15298703AA0000F63D /* ProductsViewController.xib */,
-			);
-			path = UIKit;
-			sourceTree = "<group>";
-		};
-		D2DC194F298A984C0077371B /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				D2DC1950298A99FF0077371B /* FirstViewController.swift */,
-				D2DC1951298A99FF0077371B /* FirstViewController.xib */,
-			);
-			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,7 +234,6 @@
 				D23FFD0C2986FF150000F63D /* LaunchScreen.storyboard in Resources */,
 				D23FFD092986FF150000F63D /* Assets.xcassets in Resources */,
 				D23FFD17298703AA0000F63D /* ProductsViewController.xib in Resources */,
-				D2DC1953298A99FF0077371B /* FirstViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,11 +257,9 @@
 				D23FFD212987146B0000F63D /* ProductsViewModel.swift in Sources */,
 				D20F0DBC298813D600E127AD /* Extensions.swift in Sources */,
 				D23FFD1F29870B780000F63D /* Transaction.swift in Sources */,
-				D2DC1952298A99FF0077371B /* FirstViewController.swift in Sources */,
 				D23FFD1B2987093E0000F63D /* WebService.swift in Sources */,
 				D23FFD1D29870B190000F63D /* Rate.swift in Sources */,
 				D23FFD022986FF140000F63D /* SceneDelegate.swift in Sources */,
-				D2DC1948298A97F80077371B /* ProductsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -19,7 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let navigationController = UINavigationController()
 //        navigationController.navigationBar.isHidden = true
         
-        let viewController = FirstViewController()
+        let viewController = ProductsViewController()
         navigationController.setViewControllers([viewController], animated: false)
         
         window.rootViewController = navigationController
