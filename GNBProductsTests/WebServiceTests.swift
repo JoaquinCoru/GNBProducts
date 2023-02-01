@@ -6,30 +6,56 @@
 //
 
 import XCTest
+@testable import GNBProducts
+
+enum ErrorMock: Error {
+    case mockCase
+}
 
 final class WebServiceTests: XCTestCase {
+    
+    private var urlSessionMock: URLSessionMock!
+    private var sut: WebService!
 
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        urlSessionMock = URLSessionMock()
+        sut = WebService(session: urlSessionMock)
     }
 
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        sut = nil
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    func testGetRatesSuccess() {
+        var error: NetworkError?
+        var retrievedRates: [Rate]?
+        
+        //Given
+        urlSessionMock.data = getData(resourceName: "rates")
+        urlSessionMock.response = HTTPURLResponse(url: URL(string: "http")!, statusCode: 200, httpVersion: nil, headerFields: nil)
+        
+        //When
+        sut.getRates { rates, networkError in
+            error = networkError
+            retrievedRates = rates
         }
+        
+        //Then
+        XCTAssertEqual(retrievedRates?.first?.from, "EUR")
+        XCTAssertNil(error, "There should be no error")
     }
 
+}
+
+extension WebServiceTests {
+    
+    func getData(resourceName: String) -> Data? {
+        let bundle = Bundle(for: WebServiceTests.self)
+        
+        guard let path = bundle.path(forResource: resourceName, ofType: "json") else {
+            return nil
+        }
+        
+        return try? Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+    }
 }

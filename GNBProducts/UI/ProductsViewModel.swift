@@ -30,18 +30,19 @@ class ProductsViewModel: ObservableObject {
         self.webService = webService
         
     }
+    
     /// Get convertion rates
     func getRates() {
-        
-        webService.getRates().sink { _ in
-            
-        } receiveValue: { rates in
-            self.conversionRates = rates
-            self.getConvertDictionaryRates()
-            self.loadTransactions()
+        webService.getRates{ [weak self] rates, error in
+            if let error {
+                print("Error: \(error.localizedDescription)")
+            } else {
+                self?.conversionRates = rates
+                self?.getConvertDictionaryRates()
+                self?.loadTransactions()
+            }
         }
-        .store(in: &suscriptors)
-        
+     
     }
     
     /// Transform list of convertion rates into a dictionary
@@ -53,22 +54,21 @@ class ProductsViewModel: ObservableObject {
         print("Conversion Rates \(convertDictionary)")
         
     }
-    
+  
     /// Load total list of transanctions
     private func loadTransactions() {
         
-        webService.getTransactions().sink { _ in
-            
-        } receiveValue: { transactions in
-            self.transactions = transactions
-            //            print("Transacciones: \(transactions)")
-            self.loadProducts()
-            
+        webService.getTransactions { [weak self] transactions, error in
+            if let error {
+                print("Error: \(error.localizedDescription)")
+            } else {
+                self?.transactions = transactions
+                self?.loadProducts()
+            }
         }
-        .store(in: &suscriptors)
         
     }
-    
+
     ///Load list of products in a set to avoid duplicates
     private func loadProducts() {
         self.products = Set<String>()

@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct Transaction: Codable, Hashable {
+struct Transaction: Codable, Hashable, Identifiable {
+    var id: UUID? = UUID()
     let sku: String
     let amount: Decimal
     let currency: String    

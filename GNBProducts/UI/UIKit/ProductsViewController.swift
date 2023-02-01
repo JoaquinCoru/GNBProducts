@@ -25,6 +25,7 @@ class ProductsViewController: UIViewController {
         
         pickerView.delegate = self
         pickerView.dataSource = self
+        
 
         //registrar la celda
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
