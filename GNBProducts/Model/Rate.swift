@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Rate: Codable {
+struct Rate: Codable, Equatable {
     let from: String
     let to: String
     let rate: Decimal

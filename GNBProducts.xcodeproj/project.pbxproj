@@ -21,10 +21,18 @@
 		D25A7963298928C1009D68DD /* WebServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25A7962298928C1009D68DD /* WebServiceTests.swift */; };
 		D2B5D9902989CF80002CAD44 /* URLSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B5D98F2989CF80002CAD44 /* URLSessionMock.swift */; };
 		D2B5D9952989E73D002CAD44 /* rates.json in Resources */ = {isa = PBXBuildFile; fileRef = D2B5D9942989E73D002CAD44 /* rates.json */; };
+		D2D2FC37298E8308008C4109 /* GNBProductsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D2FC36298E8308008C4109 /* GNBProductsUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		D25A795D298926C9009D68DD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D23FFCF42986FF140000F63D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D23FFCFB2986FF140000F63D;
+			remoteInfo = GNBProducts;
+		};
+		D2D2FC3A298E8308008C4109 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D23FFCF42986FF140000F63D /* Project object */;
 			proxyType = 1;
@@ -51,6 +59,8 @@
 		D25A7962298928C1009D68DD /* WebServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceTests.swift; sourceTree = "<group>"; };
 		D2B5D98F2989CF80002CAD44 /* URLSessionMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionMock.swift; sourceTree = "<group>"; };
 		D2B5D9942989E73D002CAD44 /* rates.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = rates.json; sourceTree = "<group>"; };
+		D2D2FC34298E8308008C4109 /* GNBProductsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GNBProductsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2D2FC36298E8308008C4109 /* GNBProductsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GNBProductsUITests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +72,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		D25A7956298926C9009D68DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2D2FC31298E8308008C4109 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -84,6 +101,7 @@
 			children = (
 				D23FFCFE2986FF140000F63D /* GNBProducts */,
 				D25A795A298926C9009D68DD /* GNBProductsTests */,
+				D2D2FC35298E8308008C4109 /* GNBProductsUITests */,
 				D23FFCFD2986FF140000F63D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -93,6 +111,7 @@
 			children = (
 				D23FFCFC2986FF140000F63D /* GNBProducts.app */,
 				D25A7959298926C9009D68DD /* GNBProductsTests.xctest */,
+				D2D2FC34298E8308008C4109 /* GNBProductsUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -150,6 +169,14 @@
 			path = GNBProductsTests;
 			sourceTree = "<group>";
 		};
+		D2D2FC35298E8308008C4109 /* GNBProductsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D2D2FC36298E8308008C4109 /* GNBProductsUITests.swift */,
+			);
+			path = GNBProductsUITests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -188,6 +215,24 @@
 			productReference = D25A7959298926C9009D68DD /* GNBProductsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		D2D2FC33298E8308008C4109 /* GNBProductsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D2D2FC3E298E8308008C4109 /* Build configuration list for PBXNativeTarget "GNBProductsUITests" */;
+			buildPhases = (
+				D2D2FC30298E8308008C4109 /* Sources */,
+				D2D2FC31298E8308008C4109 /* Frameworks */,
+				D2D2FC32298E8308008C4109 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D2D2FC3B298E8308008C4109 /* PBXTargetDependency */,
+			);
+			name = GNBProductsUITests;
+			productName = GNBProductsUITests;
+			productReference = D2D2FC34298E8308008C4109 /* GNBProductsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -202,6 +247,10 @@
 						CreatedOnToolsVersion = 14.2;
 					};
 					D25A7958298926C9009D68DD = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = D23FFCFB2986FF140000F63D;
+					};
+					D2D2FC33298E8308008C4109 = {
 						CreatedOnToolsVersion = 14.2;
 						TestTargetID = D23FFCFB2986FF140000F63D;
 					};
@@ -222,6 +271,7 @@
 			targets = (
 				D23FFCFB2986FF140000F63D /* GNBProducts */,
 				D25A7958298926C9009D68DD /* GNBProductsTests */,
+				D2D2FC33298E8308008C4109 /* GNBProductsUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -242,6 +292,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2B5D9952989E73D002CAD44 /* rates.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2D2FC32298E8308008C4109 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +329,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D2D2FC30298E8308008C4109 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2D2FC37298E8308008C4109 /* GNBProductsUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -279,6 +344,11 @@
 			isa = PBXTargetDependency;
 			target = D23FFCFB2986FF140000F63D /* GNBProducts */;
 			targetProxy = D25A795D298926C9009D68DD /* PBXContainerItemProxy */;
+		};
+		D2D2FC3B298E8308008C4109 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D23FFCFB2986FF140000F63D /* GNBProducts */;
+			targetProxy = D2D2FC3A298E8308008C4109 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -498,6 +568,38 @@
 			};
 			name = Release;
 		};
+		D2D2FC3C298E8308008C4109 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.GNBProductsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GNBProducts;
+			};
+			name = Debug;
+		};
+		D2D2FC3D298E8308008C4109 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.GNBProductsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GNBProducts;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -524,6 +626,15 @@
 			buildConfigurations = (
 				D25A7960298926C9009D68DD /* Debug */,
 				D25A7961298926C9009D68DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D2D2FC3E298E8308008C4109 /* Build configuration list for PBXNativeTarget "GNBProductsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2D2FC3C298E8308008C4109 /* Debug */,
+				D2D2FC3D298E8308008C4109 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

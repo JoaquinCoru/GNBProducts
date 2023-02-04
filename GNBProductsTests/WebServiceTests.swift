@@ -44,6 +44,26 @@ final class WebServiceTests: XCTestCase {
         XCTAssertEqual(retrievedRates?.first?.from, "EUR")
         XCTAssertNil(error, "There should be no error")
     }
+    
+    func testGetRatesWithError() {
+        var error: NetworkError?
+        var retrievedRates: [Rate]?
+        
+        //Given
+        urlSessionMock.data = nil
+        urlSessionMock.error = ErrorMock.mockCase
+        
+        //When
+        
+        sut.getRates { rates, networkError in
+            error = networkError
+            retrievedRates = rates
+        }
+        
+        //Then
+        XCTAssertEqual(retrievedRates, [], "Rates should be nil")
+        XCTAssertEqual(error, .other)
+    }
 
 }
 
